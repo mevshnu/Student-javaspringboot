@@ -17,4 +17,14 @@ public class StudentController
     {
         return "welcome to my contact page";
     }
+    @GetMapping("gallary")
+    public String Gallarypage()
+    {
+        return "welcome to my Gallary";
+    }
+    @GetMapping("home")
+    public String Homepage2()
+    {
+        return "welcome to my homepage";
+    }
 }
