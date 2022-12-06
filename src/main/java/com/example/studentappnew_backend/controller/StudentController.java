@@ -1,30 +1,21 @@
 package com.example.studentappnew_backend.controller;
 
+import com.example.studentappnew_backend.model.Students;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class StudentController
-{
+public class StudentController {
     @GetMapping("/")
-    public String Homepage()
-    {
+    public String Homepage() {
         return "Welcome to my website";
     }
 
-    @GetMapping("/contact")
-    public String Contactpage()
-    {
-        return "welcome to my contact page";
-    }
-    @GetMapping("gallary")
-    public String Gallarypage()
-    {
-        return "welcome to my Gallary";
-    }
-    @GetMapping("home")
-    public String Homepage2()
-    {
-        return "welcome to my homepage";
+    @PostMapping(path="/add",consumes = "application/json",produces = "application/json")
+    public String Addstudent(@RequestBody Students s) {
+        System.out.println(s.getName().toString());
+        return "Student added successfully";
     }
 }
