@@ -14,14 +14,14 @@ public class Students
     @GeneratedValue
     private int id;
     private String name;
-    private String admno;
+    private int admno;
     private int rollno;
     private String college;
 
     public Students() {
     }
 
-    public Students(int id, String name, String admno, int rollno, String college) {
+    public Students(int id, String name, int admno, int rollno, String college) {
         this.id = id;
         this.name = name;
         this.admno = admno;
@@ -45,11 +45,11 @@ public class Students
         this.name = name;
     }
 
-    public String getAdmno() {
+    public int getAdmno() {
         return admno;
     }
 
-    public void setAdmno(String admno) {
+    public void setAdmno(int admno) {
         this.admno = admno;
     }
 
